@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background: #fff7f2; color: #333; }
+nav { display: flex; justify-content: space-between; padding: 20px 40px; background: white; position: sticky; top: 0; }
+nav h2 span { color: #ff5a5a; }
+nav a { margin-left: 20px; text-decoration: none; color: #333; font-weight: bold; }
+.hero { display: flex; justify-content: space-between; align-items: center; padding: 60px 40px; }
+.hero h1 { font-size: 48px; margin: 10px 0; }
+.hero h3 { color: #ff5a5a; margin-bottom: 10px; }
+.btn { display: inline-block; background: #ff5a5a; color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; margin-top: 15px; margin-right: 10px; }
+.outline { background: white; color: #ff5a5a; border: 2px solid #ff5a5a; }
+.photo { width: 180px; height: 180px; background: #ff5a5a; color: white; font-size: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
+section { padding: 50px 40px; }
+h2 { margin-bottom: 20px; font-size: 30px; }
+.cards { display: flex; gap: 20px; flex-wrap: wrap; }
+.card { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); flex: 1; min-width: 200px; }
+footer { text-align: center; padding: 20px; background: #333; color: white; }
