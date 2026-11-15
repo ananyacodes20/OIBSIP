@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator - Ananya Verma</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background: #fff5f8; display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column; }
+h2 { color: #ff4d8d; margin-bottom: 15px; }
+.calc { background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); width: 300px; }
+#display { width: 100%; height: 55px; font-size: 28px; text-align: right; padding: 10px; border: none; background: #fff0f5; border-radius: 10px; margin-bottom: 15px; outline: none; }
+.buttons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+button { height: 55px; font-size: 20px; border: none; border-radius: 12px; background: #ffe6ef; cursor: pointer; font-weight: bold; }
+button:hover { background: #ffc2d4; }
+.equal { background: #ff4d8d !important; color: white; }
+.clear { background: #333 !important; color: white; }
+p { margin-top: 12px; color: #888; font-size: 13px; }
+</style>
+</head>
+<body>
+<h2>🧮 Calculator</h2>
+<div class="calc">
+<input type="text" id="display" readonly placeholder="0">
+<div class="buttons">
+<button class="clear" onclick="clearDisplay()">C</button>
+<button onclick="addValue('/')">/</button>
+<button onclick="addValue('*')">x</button>
+<button onclick="del()">⌫</button>
+<button onclick="addValue('7')">7</button>
+<button onclick="addValue('8')">8</button>
+<button onclick="addValue('9')">9</button>
+<button onclick="addValue('-')">-</button>
+<button onclick="addValue('4')">4</button>
+<button onclick="addValue('5')">5</button>
+<button onclick="addValue('6')">6</button>
+<button onclick="addValue('+')">+</button>
+<button onclick="addValue('1')">1</button>
+<button onclick="addValue('2')">2</button>
+<button onclick="addValue('3')">3</button>
+<button onclick="addValue('.')">.</button>
+<button onclick="addValue('0')">0</button>
+<button onclick="addValue('00')">00</button>
+<button onclick="addValue('%')">%</button>
+<button class="equal" onclick="calculate()">=</button>
+</div>
+</div>
+<p>Made by Ananya Verma</p>
+
+<script>
+function addValue(v){ document.getElementById('display').value += v; }
+function clearDisplay(){ document.getElementById('display').value = ''; }
+function del(){ let d = document.getElementById('display'); d.value = d.value.slice(0,-1); }
+function calculate(){
+  try{ document.getElementById('display').value = eval(document.getElementById('display').value); }
+  catch(e){ document.getElementById('display').value = 'Error'; }
+}
+</script>
+</body>
+</html>
